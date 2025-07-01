@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">尼尔的冒险</string>
+    <string name="loading_message">加载游戏中…</string>
+</resources>
