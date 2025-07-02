@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">尼尔的冒险</string>
-    <string name="loading_message">加载游戏中…</string>
+    <string name="privacy_title">用户协议与隐私政策</string>
+    <string name="privacy_content">欢迎游玩\"尼尔的冒险\"！请仔细阅读以下协议和政策：\n\n在使游玩本游戏前，请您务必审慎阅读、充分理解&lt;a href=\'privacy_policy\'&gt;《用户隐私政策》&lt;/a&gt;和&lt;a href=\'license_agreement\'&gt;《软件许可协议》&lt;/a&gt;的各项条款。\n\n您点击\"同意\"即视为您已阅读并同意全部条款。</string>
+    <string name="agree_button">同意</string>
+    <string name="disagree_button">不同意并退出</string>
 </resources>

@@ -2,8 +2,10 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000">
+    android:background="#000000"
+    android:orientation="vertical">
 
+    <!-- WebView 用于显示游戏内容 -->
     <WebView
         android:id="@+id/webview"
         android:layout_width="match_parent"
@@ -11,10 +13,94 @@
         android:focusable="true"
         android:focusableInTouchMode="true" />
 
+    <!-- 加载进度条 -->
     <ProgressBar
         android:id="@+id/progressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:indeterminateTint="@color/colorAccent"
         android:visibility="gone" />
+
+    <!-- 隐私政策对话框背景 -->
+    <View
+        android:id="@+id/privacyDialogBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:visibility="gone" />
+
+    <!-- 自定义隐私政策对话框 -->
+    <LinearLayout
+        android:id="@+id/privacyDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:background="@drawable/dialog_background"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:visibility="gone">
+
+        <!-- 标题 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:gravity="center"
+            android:text="用户协议与隐私政策"
+            android:textColor="@color/colorAccent"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <!-- 内容区域 -->
+        <TextView
+            android:id="@+id/privacyContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:lineSpacingExtra="4dp"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            android:linksClickable="true"
+            android:textIsSelectable="false"
+            android:focusable="true"
+            android:clickable="true" />
+
+        <!-- 按钮区域 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:divider="@drawable/divider"
+            android:showDividers="middle"
+            android:dividerPadding="10dp">
+
+            <!-- 不同意按钮 -->
+            <Button
+                android:id="@+id/btnDisagree"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:text="不同意并退出"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white" />
+
+            <!-- 同意按钮 -->
+            <Button
+                android:id="@+id/btnAgree"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:text="同意"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
 </FrameLayout>
