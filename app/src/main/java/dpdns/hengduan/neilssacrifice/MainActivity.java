@@ -326,7 +326,9 @@ public class MainActivity extends AppCompatActivity {
             super.onShowCustomView(view, callback);
 
             if (customView != null) {
-                callback.onCustomViewHidden();
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ECLAIR_MR1) {
+                    callback.onCustomViewHidden();
+                }
                 return;
             }
 
